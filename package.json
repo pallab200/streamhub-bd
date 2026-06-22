@@ -1,0 +1,30 @@
+{
+  "name": "bdix-iptv-website",
+  "version": "1.0.0",
+  "description": "BDIX IPTV Website - Fetches M3U playlist, validates channels, displays working streams",
+  "main": "src/server/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server/index.js",
+    "dev": "node --watch src/server/index.js",
+    "validate": "node scripts/validate.js",
+    "test": "vitest --run",
+    "deploy": "firebase deploy --only hosting",
+    "serve": "firebase serve --only hosting"
+  },
+  "keywords": [
+    "iptv",
+    "m3u",
+    "bdix"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "fast-check": "^4.8.0",
+    "jsdom": "^29.1.1",
+    "msw": "^2.14.6",
+    "vitest": "^4.1.9"
+  }
+}
