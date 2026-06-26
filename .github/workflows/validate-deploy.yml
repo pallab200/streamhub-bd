@@ -26,6 +26,9 @@ jobs:
       - name: Validate all channels (server-side HLS check)
         run: npm run validate
 
+      - name: Add deploy timestamp
+        run: echo "{\"deployedAt\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}" > public/build.json
+
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
 
